@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Imagegram Post Image Converter Lambda Function
+
+Resources:
+  function:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.handler # Replace with your handler
+      Runtime: nodejs18.x
+      Role: arn:aws:iam::242793502328:role/ImagegramPostImageConverterLambdaRole # Replace with your IAM role ARN
